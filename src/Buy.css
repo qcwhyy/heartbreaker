@@ -1,0 +1,89 @@
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px; /* Расстояние между элементами */
+  background-color: white;
+  /*margin-top: 300px;*/
+  padding-top: 300px;
+  padding-bottom: 300px;
+}
+.product:hover{
+  -webkit-box-shadow: 8px 10px 79px 0px rgba(34, 60, 80, 0.48);
+  -moz-box-shadow: 8px 10px 79px 0px rgba(34, 60, 80, 0.48);
+  box-shadow: 8px 10px 79px 0px rgba(34, 60, 80, 0.48);
+
+}
+
+.product {
+  flex: 1 1 calc(33.33% - 20px); /* Для отображения 3 элементов в ряд с учетом gap */
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  text-align: center;
+  justify-content: center;
+
+}
+
+.product img {
+  width: 100%;
+  max-width: 200px; /* Увеличенный размер изображения */
+  height: auto;
+  margin-bottom: 10px;
+
+
+}
+
+.product h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.product p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+}
+
+.product button {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 20px;
+  font-weight: 700;
+  color: black;
+  position: relative;
+  z-index: 10;
+}
+
+.product-btn::before{
+  content: '';
+  width: calc(100% - 20px);
+  height: calc(100% + 4px);
+  position: absolute;
+  top:-2px;
+  left:10px;
+  background: #ffffff;
+  transition: transform .4s ease-in-out;
+}
+.product-btn:hover::before{
+  transform: scaleX(0);
+}
+.product-btn::after{
+  content: '';
+  width: calc(100% + 4px);
+  height: calc(100% - 20px);
+  position: absolute;
+  top:10px;
+  left:-2px;
+  background: #ffffff;
+  transition: transform .4s ease-in-out;
+}
+.product-btn:hover::after{
+  transform: scaleX(0);
+}
+.product-btn:active{
+  opacity: 0.6;
+}
