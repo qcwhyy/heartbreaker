@@ -12,9 +12,7 @@ import Promo from "./Promo";
 function App() {
   return (
       <BrowserRouter>
-          {/*<div className="app-wrapper">*/}
-          {/*    <Promo/>*/}
-          {/*    <Buy/>*/}
+
               <div className="app-wrapper-content">
                   <Routes>
                       <Route path="/Buy.js" element={<Buy/>}/>

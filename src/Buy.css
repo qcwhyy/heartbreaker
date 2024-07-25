@@ -2,33 +2,38 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px; /* Расстояние между элементами */
-  background-color: white;
-  /*margin-top: 300px;*/
+  gap: 20px;
+  background-color: #ffffff;
+
   padding-top: 300px;
   padding-bottom: 300px;
+  user-select:none;
 }
 .product:hover{
   -webkit-box-shadow: 8px 10px 79px 0px rgba(34, 60, 80, 0.48);
   -moz-box-shadow: 8px 10px 79px 0px rgba(34, 60, 80, 0.48);
   box-shadow: 8px 10px 79px 0px rgba(34, 60, 80, 0.48);
+  cursor: pointer;
+
 
 }
 
 .product {
-  flex: 1 1 calc(33.33% - 20px); /* Для отображения 3 элементов в ряд с учетом gap */
+  flex: 1 1 calc(33.33% - 20px);
   box-sizing: border-box;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 8px;
   text-align: center;
   justify-content: center;
+  user-select:none;
+  transition: 1s;
 
 }
 
 .product img {
   width: 100%;
-  max-width: 200px; /* Увеличенный размер изображения */
+  max-width: 200px;
   height: auto;
   margin-bottom: 10px;
 
@@ -43,6 +48,7 @@
 .product p {
   font-size: 1.1em;
   margin-bottom: 10px;
+  user-select:none;
 }
 
 .product button {
@@ -56,6 +62,7 @@
   color: black;
   position: relative;
   z-index: 10;
+  user-select:none;
 }
 
 .product-btn::before{
@@ -80,10 +87,33 @@
   left:-2px;
   background: #ffffff;
   transition: transform .4s ease-in-out;
+
 }
 .product-btn:hover::after{
   transform: scaleX(0);
+
 }
 .product-btn:active{
   opacity: 0.6;
+
+}
+.footer{
+  color: white;
+  user-select:none;
+
+
+}
+.footer-information{
+  text-align:center;
+  user-select:none;
+  font-family: Arial, monospace;
+  font-weight:normal;
+  align-content: center;
+  padding: 15px;
+
+}
+.headers{
+  padding-top: 32px;
+  margin-top:48px;
+
 }
